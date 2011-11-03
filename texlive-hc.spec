@@ -1,3 +1,9 @@
+# revision 15878
+# category Package
+# catalog-ctan /macros/latex/contrib/hc
+# catalog-date 2008-04-20 19:53:04 +0200
+# catalog-license other-free
+# catalog-version undef
 Name:		texlive-hc
 Version:	20080420
 Release:	1
@@ -52,6 +58,7 @@ hcreport, hcletter, and hcslides.
 #- source
 %doc %{_texmfdistdir}/source/latex/hc/hc.dtx
 %doc %{_texmfdistdir}/source/latex/hc/hc.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ hcreport, hcletter, and hcslides.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
