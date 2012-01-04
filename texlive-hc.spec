@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-hc
 Version:	20080420
-Release:	1
+Release:	2
 Summary:	Replacement for the LaTeX classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hc
