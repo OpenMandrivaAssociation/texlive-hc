@@ -58,3 +58,17 @@ hcreport, hcletter, and hcslides.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080420-2
++ Revision: 752528
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080420-1
++ Revision: 718606
+- texlive-hc
+- texlive-hc
+- texlive-hc
+- texlive-hc
+
