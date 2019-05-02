@@ -5,8 +5,8 @@
 # catalog-license other-free
 # catalog-version undef
 Name:		texlive-hc
-Version:	20180303
-Release:	2
+Version:	20190228
+Release:	1
 Summary:	Replacement for the LaTeX classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hc
