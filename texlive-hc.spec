@@ -1,19 +1,13 @@
-# revision 15878
-# category Package
-# catalog-ctan /macros/latex/contrib/hc
-# catalog-date 2008-04-20 19:53:04 +0200
-# catalog-license other-free
-# catalog-version undef
 Name:		texlive-hc
-Version:	20190228
+Version:	15878
 Release:	1
 Summary:	Replacement for the LaTeX classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hc
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,12 +19,12 @@ the Koma-Script bundle and the seminar class. Includes hcart,
 hcreport, hcletter, and hcslides.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -51,24 +45,11 @@ hcreport, hcletter, and hcslides.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20080420-2
-+ Revision: 752528
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20080420-1
-+ Revision: 718606
-- texlive-hc
-- texlive-hc
-- texlive-hc
-- texlive-hc
-
