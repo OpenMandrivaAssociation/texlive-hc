@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Replacement for the LaTeX classes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/hc
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/hc
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/hc.doc.r%{version}.tar.xz
